@@ -2,7 +2,7 @@
  * @Author: ChenRuiJun
  * @Date: 2021-06-09 18:39:29
  * @LastEditors: ChenRuiJun
- * @LastEditTime: 2021-06-09 19:28:14
+ * @LastEditTime: 2021-06-09 21:05:59
  * @Description: vue-transition-animation v0.0.1
  * 
  * Copyright OpenJS Foundation and other contributors
@@ -21,32 +21,32 @@
 .dialog-fade-in-leave-active{
   animation: dialog-fade-out 0.3s;
 }
-.flipInY-enter-active {
+.flip-in-y-enter-active {
   backface-visibility: visible !important;
   animation: flipInY 1s;
 }
-.flipInY-leave-active {
+.flip-in-y-leave-active {
   backface-visibility: visible !important;
   animation: flipOutY 1s;
 }
-.flipInX-enter-active {
+.flip-in-x-enter-active {
   backface-visibility: visible !important;
   animation: flipInX 1s;
 }
-.flipInX-leave-active {
+.flip-in-x-leave-active {
   backface-visibility: visible !important;
   animation: flipOutX 1s;
 }
-.bounceInLeft-enter-active {
+.bounce-in-left-enter-active {
   animation: bounceInLeft 1s;
 }
-.bounceInLeft-leave-active {
+.bounce-in-left-leave-active { 
   animation: bounceOutRight 1s;
 }
-.bounceInDown-enter-active{
+.bounce-in-down-enter-active{
   animation: bounceInDown 1s;
 }
-.bounceInDown-leave-active {
+.bounce-in-down-leave-active {
   animation: bounceOutDown 1s;
 }
 .fade-in-enter-active,.fade-in-leave-active {
