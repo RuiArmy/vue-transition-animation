@@ -1,7 +1,11 @@
-/**
-  
-*/
-/* // transition: fade-in-linear */
+/*
+ * @Author: ChenRuiJun
+ * @Date: 2021-06-09 18:39:29
+ * @LastEditors: ChenRuiJun
+ * @LastEditTime: 2021-06-09 19:17:30
+ * @Description: vue-transition-animation v0.0.1
+ */
+
 .gk-fade-in-linear-enter-active,.gk-fade-in-linear-leave-active {
 	transition: opacity .2s linear
 }
@@ -10,7 +14,6 @@
 	opacity: 0
 }
 
-/* // transition: fade-in-linear */
 .gk-dialog-fade-in-enter-active {
 	animation: dialog-fade-in 0.3s;
 }
@@ -38,7 +41,6 @@
     opacity: 0;
   }
 }
-/* // transition: flipInY */
 .gk-flipInY-enter-active {
   backface-visibility: visible !important;
   animation: flipInY 1s;
@@ -97,7 +99,6 @@
     opacity: 0;
   }
 }
-/* // transition: flipInX */
 .gk-flipInX-enter-active {
   backface-visibility: visible !important;
   animation: flipInX 1s;
@@ -157,7 +158,6 @@
     opacity: 0;
   }
 }
-/* // transition: bounceInLeft */
 .gk-bounceInLeft-enter-active {
   animation: bounceInLeft 1s;
 }
@@ -214,7 +214,6 @@
     transform: translate3d(0, 0, 0);
   }
 }
-/* // transition: bounceInDown */
 .gk-bounceInDown-enter-active{
   animation: bounceInDown 1s;
 }
@@ -277,7 +276,6 @@
     transform: translate3d(0, 2000px, 0) scaleY(3);
   }
 }
-/* // transition: fade-in */
 .gk-fade-in-enter-active,.gk-fade-in-leave-active {
 	transition: all .3s cubic-bezier(.55,0,.1,1)
 }
@@ -286,7 +284,6 @@
 	opacity: 0
 }
 
-/* // transition: zoom-center */
 .gk-zoom-in-center-enter-active,.gk-zoom-in-center-leave-active {
 	transition: all .3s cubic-bezier(.55,0,.1,1)
 }
@@ -296,7 +293,6 @@
 	transform: scaleX(0)
 }
 
-/* // transition: zoom-top */
 .gk-zoom-in-top-enter-active,.gk-zoom-in-top-leave-active {
 	opacity: 1;
 	transform: scaleY(1);
@@ -313,7 +309,6 @@
 	transform: scaleY(0)
 }
 
-/* // transition: zoom-bottom */
 .gk-zoom-in-bottom-enter-active,.gk-zoom-in-bottom-leave-active {
 	opacity: 1;
 	transform: scaleY(1);
@@ -326,7 +321,6 @@
 	transform: scaleY(0)
 }
 
-/* // transition: zoom-left */
 .gk-zoom-in-left-enter-active,.gk-zoom-in-left-leave-active {
 	opacity: 1;
 	transform: scale(1);
@@ -339,7 +333,6 @@
 	transform: scale(.45)
 }
 
-/* // transition: zoom-right */
 .gk-zoom-in-right-enter-active,.gk-zoom-in-right-leave-active {
 	opacity: 1;
 	transform: scale(1);
