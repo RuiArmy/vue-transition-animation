@@ -2,7 +2,7 @@
  * @Author: ChenRuiJun
  * @Date: 2021-06-09 18:39:29
  * @LastEditors: ChenRuiJun
- * @LastEditTime: 2021-06-10 13:51:11
+ * @LastEditTime: 2021-06-10 15:09:18
  * @Description: vue-transition-animation v0.0.1
  * 
  * Copyright OpenJS Foundation and other contributors
@@ -116,6 +116,26 @@
 .zoom-in-right-enter-from,.zoom-in-right-leave-active {
 	opacity: 0;
 	transform: scale(.45)
+}
+
+.scale-enter-active{
+  animation: scale .3s;
+}
+.scale-leave-active {
+  animation: scale .3s reverse;
+}
+@keyframes scale {
+	0% {
+		opacity: .3;
+		-ms-transform: scale(.5);
+		transform: scale(.5)
+	}
+
+	100% {
+		opacity: 1;
+		-ms-transform: scale(1);
+		transform: scale(1)
+	}
 }
 @keyframes dialog-fade-in {
   0% {
@@ -342,19 +362,5 @@
     opacity: 0;
     -webkit-transform: translate3d(0, 2000px, 0) scaleY(3);
     transform: translate3d(0, 2000px, 0) scaleY(3);
-  }
-}
-@keyframes scaleDraw {  
-  0%{
-      transform: scale(1); 
-  }
-  25%{
-      transform: scale(1.1);
-  }
-  50%{
-      transform: scale(1);
-  }
-  75%{
-      transform: scale(1.1);
   }
 }
