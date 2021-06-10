@@ -2,40 +2,97 @@
  * @Author: ChenRuiJun
  * @Date: 2021-06-09 19:10:31
  * @LastEditors: ChenRuiJun
- * @LastEditTime: 2021-06-09 19:11:21
+ * @LastEditTime: 2021-06-10 14:57:24
  * @Description: Say something
 -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
-  <title>[vue过渡动画]-vue-transition-animation</title>
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-</head>
-<body>
-  <!-- header -->
-  <div class="header">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1" />
+    <title>[vue过渡动画]-vue-transition-animation</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/gracewo/vue-transition-animation/min.css" />
+    <script src="https://unpkg.com/vue@next"></script>
+    <style>
+      *{margin: 0;padding: 0;}
+      .transition-box {
+        margin-bottom: 10px;
+        width: 400px;
+        height: 200px;
+        border-radius: 4px;
+        line-height: 200px;
+        background: linear-gradient(0deg, #fe8d00 0%, #ff3000 100%);
+        text-align: center;
+        color: #fff;
+        margin-right: 20px;
+        box-sizing: border-box;
+      }
+      .btn{
+        width: 200px;
+        height: 80px;
+        color: #FFF;
+        cursor: pointer;
+        font-size: 14px;
+        border-radius: 4px;
+        background-color: #b621fe;
+        text-align: center;
+        line-height: 80px;
+        outline: none;
+        border: 0;
+      }
+      .animation-list{
+        width: 1000px;
+        margin: 0 auto;
+        display: flex;
+        flex-flow: row wrap;
+        position: absolute;
+        top: 300px;
+        left: 18%;
+      }
+      .animation-list .item{
+        padding: 10px 15px;
+        color: #fff;
+        margin: 4px;
+        background-color: #666;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      .animation-list .item:hover{background-color: #ff3000;}
+    </style>
+  </head>
+  <body>
+    <div id="app" class="demo">
+      <div style="display: flex; margin: 20px auto;width: 500px;">
+        <transition :name="animationName">
+          <div v-show="show" class="transition-box">{{animationName}}</div>
+        </transition>
+      </div>
+      <div class="animation-list">
+        <div class="item" v-for="(item, index) in animationList" @click="handleClick(item)" :key="index">{{item}}</div>
+        <!-- <button class="btn" @click="handleClick">Click Me</button> -->
+      </div>
+    </div>
 
-  </div>
-  <!-- banner -->
-  <div class="banner">
+    <script type="text/javascript">
+      const createApp = {
+        data() {
+          return {
+            show: true,
+            animationName:'',
+            animationList:['zoom-in-center','zoom-in-top','zoom-in-bottom','zoom-in-left','zoom-in-right','fade-in-linear','fade-in','fade-in-3d','flip-in-x','flip-in-y','bounce-in-down','bounce-in-left']
+          };
+        },
+        methods: {
+          handleClick(item){
+            this.animationName = item;
+            this.show = !this.show;
+          },
+        },
+      };
 
-  </div>
-  <!-- container -->
-  <div class="container">
-
-  </div>
-  <!-- footer -->
-  <div class="footer">
-
-  </div>
-
-  <!-- js -->
-  <script type="text/javascript" src="https://cdn.bootcdn.net/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-  <script type="text/javascript">
-
-  </script>
-</body>
+      Vue.createApp(createApp).mount("#app");
+    </script>
+  </body>
 </html>
