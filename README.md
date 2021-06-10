@@ -15,6 +15,6 @@ vue 常用[transition](https://cn.vuejs.org/v2/api/#transition)过渡动画库
 
 ```hmtl
 <transition name="zoom-in-center">
-  <div v-show="show2" class="transition-box">.zoom-in-center</div>
+  <div v-show="show" class="transition-box">.zoom-in-center</div>
 </transition>
 ```
