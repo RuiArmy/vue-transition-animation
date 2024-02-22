@@ -10,7 +10,7 @@ vue 常用[transition](https://cn.vuejs.org/v2/api/#transition)过渡动画库
 
 ```hmtl
 <!-- cdn引入 -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/gracewo/vue-transition-animation/min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/RuiArmy/vue-transition-animation/min.css" />
 ```
 
 ```hmtl
